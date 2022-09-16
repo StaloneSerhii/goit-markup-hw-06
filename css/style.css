@@ -60,6 +60,18 @@ img {
 
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 
 /* LogoTipe (logo span) */
@@ -655,6 +667,70 @@ img {
     color: var(--hero-white);
 }
 
+.send-footer {
+    width: 570px;
+}
+
+.send-input {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.send-input-s {
+    width: 358px;
+    height: 50px;
+    background-color: var(--fon);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+    color: var(--backraund-usteam);
+}
+
+.send-input-s:focus-visible {
+    border-color: transparent;
+}
+
+.btn-send {
+    font-family: 'Roboto';
+    cursor: pointer; 
+    background: var(--bacraund-color-button);
+    color: var(--hero-white);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
+
+    height: 50px;
+    min-height: 50px;
+    border: 0;
+    padding: 10px 32px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+}
+
+.btn-send:hover {
+    background-color: var(--p-color);
+}
+
+.send-footer {
+    margin-left: 95px;
+}
+
+.send-footer strong {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--backraund-usteam);
+}
+
 /* ico footer */
 
 .position-icon {
@@ -862,13 +938,16 @@ img {
     right: 8px;
 
     cursor: pointer;
+
+    transition: color 250ms var(--cubic);
+}
+
+.modal-btn:hover {
+    color: var(--bacraund-color-button);
+    border: 0;
 }
 
 /* Modal info */
-
-.form {
-    margin-top: 40px;
-}
 
 .modal-info strong {
     font-weight: 700;
@@ -879,6 +958,7 @@ img {
     color: var(--brand-color);
 
     margin-top: 40px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center
 }
@@ -920,6 +1000,7 @@ img {
 }
 
 .modal-label-form {
+    display: block;
     position: relative;
     font-family: 'Roboto';
     font-style: normal;
@@ -928,7 +1009,10 @@ img {
     line-height: 1.7;
     letter-spacing: 0.03em;
 
-    color: #757575;
+    color: var(--p-color);
+
+    margin-bottom: 30px;
+    
 }
 
 .modal-label-form a {
@@ -936,37 +1020,41 @@ img {
     
 }
 
-.modal-form-label {
-    margin-top: 30px;
-}
-
 .modal-label-span {
     position: absolute;
     left: 0;
-    transform: translateY(-20px);
+    transform: translateY(-25px);
 }
 
 .icon-form {
     position: absolute;
     left: 12px;
-    top: 0;
+    top: 11px;
 }
 
 .icon-check-form {
     fill: var();
     border: 2px solid var(--brand-color);
-    position: absolute;
-    width: 16px;
-    height: 15px;
-    left: -7px;
-    top: 3px;
+   margin-right: 7px;
+    border-radius: 2px;
+
+    transition: border 100ms linear ;
 }
 
 .icon-check-form:focus {
     background-image: url(../images/symbol-defs.svg#icon-form);
 }
 
+.icon-check {
+    width: 16px;
+    height: 15px;
+    opacity: 0;
+
+    transition: opacity 250ms var(--cubic);
+}
+
 .hero-button-modal {
+    display: block;
     font-family: 'Roboto';
     cursor: pointer;
     background: var(--bacraund-color-button);
@@ -983,18 +1071,38 @@ img {
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
 
-    margin-top: 30px;
-
+    margin: 30px auto;
 }
 
 .hero-button-modal:hover {
     background-color: #0087f3;
-
 }
 
 .modal-check-label {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    user-select: none;
+    align-items: center;
+
+    
 }
+
+.modal-form-check:checked + .icon-check-form .icon-check {
+    opacity: 1;
+    background-color: var(--bacraund-color-button);
+}
+
+.modal-form-check:checked + .icon-check-form {
+    background-color: var(--bacraund-color-button);
+    border: 0;
+}
+
+
+.register-form-spam {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--p-color);
+
+}
+
