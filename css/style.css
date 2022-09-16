@@ -686,10 +686,13 @@ img {
     border-radius: 4px;
     padding-left: 16px;
     color: var(--backraund-usteam);
+
+    transition: outline 250ms var(--cubic), border 250ms var(--cubic);
 }
 
-.send-input-s:focus {
-    border-color: var(--bacraund-color-button);
+.send-input-s:focus-visible {
+    outline: 1px solid #0087f3;
+    border: 0;
 }
 
 .btn-send {
@@ -1043,8 +1046,6 @@ img {
     border: 2px solid var(--brand-color);
    margin-right: 7px;
     border-radius: 2px;
-
-    transition: border 100ms linear ;
 }
 
 .icon-check-form:focus {
