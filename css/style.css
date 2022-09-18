@@ -745,7 +745,7 @@ img {
 
 .position-icon {
      display: flex; 
-     align-items: center;
+     align-items: baseline;
 }
 
 .footer-icon {
