@@ -624,7 +624,7 @@
           </ul>
         </div>
         <form class="send-footer">
-          <strong id="send">Підпишіться на розсилку</strong>
+          <strong>Підпишіться на розсилку</strong>
           <div class="send-input">
           <input 
           class="send-input-s" 
@@ -637,11 +637,13 @@
           required
           >
           <label for="send"></label>
-          <button class="btn-send" type="submit">Підписатися <svg class="svg-send" width="24" height="24">
-            <use href="./images/symbol-defs.svg#icon-send"></svg>
-            </svg></button>
+          <button class="btn-send" type="submit">Підписатися 
+            <svg class="svg-send" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+            </button>
+            </div>
           </form>
-      </div>
       </div>
     </footer>
     <!-- Modal -->
@@ -701,7 +703,9 @@
                   <use href="./images/symbol-defs.svg#icon-email"></use>
                 </svg>
               </label>
-            <label for="coments" class="modal-label-form" id="">
+              </div>
+              </div>
+            <label for="coments" class="modal-label-form">
               <textarea
               class="modal-input-texterea"
                 name="coments"
@@ -712,7 +716,8 @@
               ></textarea>
               <span class="modal-label-span">Коментар</span>
             </label> 
-          </div>      
+          </form>
+          <form>      
               <label class="modal-label-form modal-check-label" for="checkt">
                 <input class="modal-form-check visually-hidden" type="checkbox" name="checkt" id="checkt"/>
                 <svg class="icon-check-form" width="18" height="18">
@@ -721,7 +726,6 @@
                 <span class="register-form-spam">Погоджуюся з розсилкою та приймаю <a target="_blank" href="">Умови договору</a></span>
               </label>
               <button class="hero-button-modal" type="submit">Відправити</button>
-          
           </form>
         </div>
       </div>
