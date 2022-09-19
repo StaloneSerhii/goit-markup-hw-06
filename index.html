@@ -650,12 +650,10 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>&#215;</button>
-        <div class="modal-info">
           <form name="modal-form" class="modal-form">
-            <div class="form">
-              <strong>Залиште свої дані, ми вам передзвонимо</strong>
-              <div class="modal-form-label">
+              <strong class="modal-form__strong">Залиште свої дані, ми вам передзвонимо</strong>
               <label for="name" class="modal-label-form">
+                <span class="modal-label-span">Ім'я</span>
                 <input
                 class="modal-input"
                   type="text"
@@ -666,12 +664,12 @@
                   placeholder=" "
                   id="name"
                 />
-                <span class="modal-label-span">Ім'я</span>
                 <svg class="icon-form" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-person"></use>
                 </svg>
               </label>
               <label for="phone" class="modal-label-form">
+                <span class="modal-label-span">Телефон</span>
                 <input
                 class="modal-input"
                   type="text"
@@ -682,12 +680,13 @@
                   placeholder=" "
                   id="phone"
                 />
-                <span class="modal-label-span">Телефон</span>
+               
                 <svg class="icon-form" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-phone"></use>
                 </svg>
               </label>
               <label for="email" class="modal-label-form">
+                <span class="modal-label-span">Пошта</span>
                 <input
                 class="modal-input"
                   type="email"
@@ -698,14 +697,13 @@
                   placeholder=" "
                   id="email"
                 />
-                <span class="modal-label-span">Пошта</span>
+                
                 <svg class="icon-form" width="18" height="18">
                   <use href="./images/symbol-defs.svg#icon-email"></use>
                 </svg>
               </label>
-              </div>
-              </div>
-            <label for="coments" class="modal-label-form">
+            <label for="coments" class="modal-label-form margin">
+              <span class="modal-label-span">Коментар</span>
               <textarea
               class="modal-input-texterea"
                 name="coments"
@@ -713,12 +711,9 @@
                 cols="10"
                 rows="5"
                 placeholder="Ведіть текст"
-              ></textarea>
-              <span class="modal-label-span">Коментар</span>
-            </label> 
-          </form>
-          <form>      
-              <label class="modal-label-form modal-check-label" for="checkt">
+              ></textarea>             
+            </label>     
+              <label class="modal-check-label" for="checkt">
                 <input class="modal-form-check visually-hidden" type="checkbox" name="checkt" id="checkt"/>
                 <svg class="icon-check-form" width="18" height="18">
                   <use class="icon-check" href="./images/symbol-defs.svg#icon-check"></use>
@@ -727,7 +722,6 @@
               </label>
               <button class="hero-button-modal" type="submit">Відправити</button>
           </form>
-        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>

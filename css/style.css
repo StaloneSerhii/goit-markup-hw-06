@@ -288,6 +288,7 @@ img {
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     margin-top: 30px;
+    letter-spacing: 0.06em;
 
     transition-property: background-color;
     transition-duration: 250ms;
@@ -925,7 +926,6 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 40px;
     
 }
 
@@ -970,7 +970,7 @@ img {
     letter-spacing: 0.03em;
     color: var(--brand-color);
 
-    margin-bottom: 30px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center
 }
@@ -1007,6 +1007,7 @@ img {
     outline: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    height: 120px;
 }
 
 .modal-label-form {
@@ -1015,31 +1016,29 @@ img {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
 
     color: var(--p-color);
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     
 }
 
 .modal-label-form a {
     color: var(--bacraund-color-button);
-    
 }
 
 .modal-label-span {
-    position: absolute;
-    left: 0;
-    transform: translateY(-20px);
+    display: block;
+    margin-bottom: 4px;
 }
 
 .icon-form {
     position: absolute;
     left: 12px;
-    top: 11px;
+    bottom: 12px;
 }
 
 .icon-check-form {
@@ -1063,10 +1062,12 @@ img {
 
 .hero-button-modal {
     display: block;
+
     font-family: 'Roboto';
     cursor: pointer;
     background: var(--bacraund-color-button);
     color: var(--hero-white);
+
     font-weight: 700;
     font-size: 16px;
     line-height: 1.8;
@@ -1078,8 +1079,11 @@ img {
     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+    letter-spacing: 0.06em;
 
-    margin: 30px auto;
+    margin: 0 auto;
+    width: 200px;
+height: 50px;
 }
 
 .hero-button-modal:hover {
@@ -1091,8 +1095,13 @@ img {
     justify-content: center;
     user-select: none;
     align-items: center;
-
+    margin-top: 20px;
+    margin-bottom: 30px;
     
+}
+
+.modal-form {
+    padding: 40px;
 }
 
 .modal-form-check:checked + .icon-check-form .icon-check {
@@ -1107,10 +1116,29 @@ img {
 
 
 .register-form-spam {
+    font-family: 'Roboto';
+    font-weight: 400;
     font-size: 14px;
-    line-height: 1.7;
+    line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-    color: var(--p-color);
-
+    color: var(--second-cl);
+    user-select: none;
 }
 
+.margin {
+    margin: 0;
+}
+
+.modal-form__strong {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--brand-color);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
